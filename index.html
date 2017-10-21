@@ -118,12 +118,19 @@
       z-index: 0; 
     } */ 
 
-    .story-line {
+    .panel-heading {
       clear:both ;
+      text-align: center; 
+      font-size: 30px;
+    }
+
+    .panel-body {
+      text-align: center;
+      font-size: 30px;
     }
 
     .book-title {
-      text-align: center;
+      text-align: center; 
     }
 
   </style>
@@ -157,12 +164,18 @@
       <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
       <br/><br/><br/><br/><br/><br/><br/><br/>
       <!-- end --> 
-      <div class="story-line"> 
+<!--       <div class="story-line"> 
         <p> Once upon a time, there was a lost puppy who just needed a friend. </p> 
       </div>
       <div class="voice-line"> 
         <p><font color="green">Once upon a time, there was a lost puppy who just needed a friend.</font></p>
-      </div> 
+      </div> -->
+
+<div class="panel panel-default">
+  <div class="panel-heading">Once upon a time, there was a lost puppy who just needed a friend.</div>
+  <div class="panel-body"><font color="green"> Once upon a time, there was a lost puppy who just needed a friend.</font></div>
+</div>
+
     </div>
   </div>
 
@@ -183,10 +196,6 @@
   <p> “Come with me, I will be your friend.” said the Princess. </p>
   
   <p> And they lived happily ever after. </p> -->
-
-
-
-
 
   <script>
     var img = document.createElement("img"); 
