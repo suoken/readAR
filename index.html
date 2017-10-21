@@ -122,6 +122,8 @@
       clear:both ;
       text-align: center; 
       font-size: 30px;
+      animation-duration: 3s; 
+      animation-name: slidein; 
     }
 
     .panel-body {
@@ -132,6 +134,17 @@
     .book-title {
       text-align: center; 
     }
+
+    @keyframes slidein {
+      from {
+        margin-left: 100%; 
+        width: 300%;
+      }
+      to { 
+      margin-left: 0%; 
+      width: 100%; 
+    }
+  }
 
   </style>
 </head>
