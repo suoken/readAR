@@ -10,6 +10,14 @@ app.get('/', (request, response) => {
   response.sendFile(__dirname + '/index.html'); 
 })
 
+app.get('/stories.html', (request, response) => { 
+	response.sendFile(__dirname + '/public/stories.html'); 
+})
+
+app.get('/account.html', (request, response) => { 
+	response.sendFile(__dirname + '/public/account.html')
+})
+
 app.get('/server.js', (request, response) => {
   lrs.cli.parse('listen');
 })
