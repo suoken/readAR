@@ -83,7 +83,7 @@
        text-decoration: none;
     }
 
-    img  {
+    img{
       width: 100px;
       height: auto; 
     }
@@ -92,6 +92,45 @@
       text-align: center; 
       font-size: 30px;
     } 
+
+    .list-group {
+      border:0 !important;
+      padding-top: 2px !important;
+      padding-bottom: 2px !important; 
+      overflow:hidden;  
+      position: relative;
+      display: block;
+      padding: 50px 50px;
+      margin-bottom: -1px;
+      background-color: #fff;
+      border: 0px solid #ddd;
+    }
+
+    .mb-1 {
+      position: absolute;
+      top: 5px; 
+      left:140px;
+    }
+
+    small {
+      position: absolute;
+      left: 140px; 
+      top: 80px;
+      font-size: 14px; 
+    }
+
+    .completed-status {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+    }
+
+    .star-rating {
+      position: absolute;
+      left: 140px; 
+      top: 110px;
+    }
+
   }
 
   </style>
@@ -107,12 +146,50 @@
       <ul> 
         <li><a href="#">Home</a></li>
         <li><a href="stories.html">Stories</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="account.html">Profile</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
+
+  <div class="d-flex w-100 justify-content-between" style="padding-top: 4px;">
+    <p>Books Completed</p>
+  </div>
+
+  <div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <img src=img/BrittneyAndBenny.png> 
+    <p class="mb-1">Brittney and Benny</p>
+    <small>Fooled again thinking the dog likes me my slave human didn't give me any food so i pooped on the floor curl up and sleep on.</small>
+    <img class="completed-status" src="img/checkmark.png"> 
+    <img class="star-rating" src="img/star_rating.png"> 
+  </a>
+
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+<!--     <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+    </div> -->
+    <img src=img/ChloesQuest.png> 
+    <p class="mb-1">Chole's Quest</p>
+    <small class="text-muted">Sugar espresso filter crema mug instant viennese aroma variety acerbic fair trade redeye. Sugar organic french. </small>
+    <img class="completed-status" src="img/checkmark.png"> 
+    <img class="star-rating" src="img/star_rating.png"> 
+  </a>
+  <br/> 
+  <div class="d-flex w-100 justify-content-between" style="padding-top: 4px;">
+    <p>In bookshelf</p>
+  </div>
+
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+<!--     <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+    </div> -->
+    <img src="img/TheEarthAndI.png"> 
+    <p class="mb-1">The Earth And I</p>
+    <small class="text-muted">Sugar espresso filter crema mug instant viennese aroma variety acerbic fair trade redeye. Sugar organic french.</small>
+  </a>
+
 
 </body>
 </html>
