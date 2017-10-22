@@ -21,6 +21,10 @@
  * at https://cloud.google.com/speech/docs.
  */
 
+ /* THIS FILE HAS BEEN MODIFIED */
+
+ //meep = require('../public/meep.js')
+
 'use strict';
 
 function syncRecognize (filename, encoding, sampleRateHertz, languageCode) {
@@ -421,6 +425,7 @@ function streamingMicRecognize (encoding, sampleRateHertz, languageCode) {
   // const languageCode = 'en-US';
 
   const request = {
+    //name: 'operations/our/speech/op',
     config: {
       encoding: encoding,
       sampleRateHertz: sampleRateHertz,
@@ -432,11 +437,12 @@ function streamingMicRecognize (encoding, sampleRateHertz, languageCode) {
   // Create a recognize stream
   const recognizeStream = speech.streamingRecognize(request)
     .on('error', console.error)
-    .on('data', (data) =>
-        process.stdout.write(
+    .on('data', function(data) {
+        //console.log(3)
+        console.log(
           (data.results[0] && data.results[0].alternatives[0])
             ? `Transcription: ${data.results[0].alternatives[0].transcript}\n`
-            : `\n\nReached transcription time limit, press Ctrl+C\n`));
+            : `\n\nReached transcription time limit, press Ctrl+C\n`)});
 
   // Start recording and send the microphone input to the Speech API
   record
@@ -542,4 +548,5 @@ if (module === require.main) {
   cli.parse(process.argv.slice(2));
 }
 
+//cli.parse('listen');
 module.exports.cli = cli;
