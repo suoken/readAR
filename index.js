@@ -1,11 +1,13 @@
 const express = require('express')
-const speech = require('./speech')
-const lrs = require('./speech_to_text')
+const lrs = require('./public/speech_to_text')
 const app = express()
 const port = 3000
 
+app.use('/public', express.static(__dirname + "/public")); 
+
 app.get('/', (request, response) => {
-  response.send('Hello from Express!')
+  // response.send('Hello from Express!')
+  response.sendFile(__dirname + '/index.html'); 
 })
 
 app.get('/server.js', (request, response) => {
