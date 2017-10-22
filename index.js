@@ -22,10 +22,13 @@ app.get('/server.js', (request, response) => {
   lrs.cli.parse('listen');
 })
 
+app.get('splashpage.html', (request, response) => { 
+	response.sendFile(__direname + '/public/splashpage.html')
+})
+
 app.listen(port, (err) => {
   if (err) {
     return console.log('something bad happened', err)
   }
-
   console.log(`server is listening on ${port}`)
 })
