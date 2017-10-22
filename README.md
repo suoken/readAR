@@ -5,7 +5,6 @@
 ```
 > npm install
 > node index.js
-
 ```
 
 ## Inspiration
