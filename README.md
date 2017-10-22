@@ -4,7 +4,9 @@
 
 ```
 > npm install
-> node index.js```
+> node index.js
+
+```
 
 ## Inspiration
 Some children have trouble reading out loud. We want to make a system in which kids can have a fun time reading out loud by providing a reward system that allows them to also be part of the story using augmented reality. 
