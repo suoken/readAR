@@ -13,6 +13,8 @@ Some children have trouble reading out loud. We want to make a system in which k
 ## What it does
 The child would read a sentence out loud and the sentence would be transcribed using Google's Speech Recognition service. When their speech matches the sentence, the child receives a prize in the form of a AR face filter (a virtual mask). That mask would be related to the story (eg. if the story talks about a puppy, the mask would be a puppy). 
 
+![Picture of filter after reading a sentence](https://github.com/suoken/readAR/blob/master/doc_pictures/Screen%20Shot%202017-10-22%20at%204.00.01%20AM.png?raw=true "Picture of filter after reading a sentence")
+
 ## How we built it
 HTML, CSS, JavaScript, Google Cloud Platform. Face tracking was developed using tracker.js
 

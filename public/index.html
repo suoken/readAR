@@ -5,16 +5,17 @@
   <title>ReadAR</title>
   <!-- <link rel="stylesheet" href="assets/demo.css"> --> 
 
-  <script src="/build/tracking-min.js"></script>
-  <script src="/build/data/face-min.js"></script>
-  <script src="/src/alignment/training/Landmarks.js"></script>
-  <script src="/src/alignment/training/Regressor.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="public/build/tracking-min.js"></script>
+  <script src="public/build/data/face-min.js"></script>
+  <script src="public/src/alignment/training/Landmarks.js"></script>
+  <script src="public/src/alignment/training/Regressor.js"></script>
 
   <!--<script src="../node_modules/dat.gui/build/dat.gui.min.js"></script> --> 
 
-  <script src="/build/data/face-min.js"></script>
-  <script src="/build/data/eye-min.js"></script>
-  <script src="/build/data/mouth-min.js"></script>
+  <script src="public/build/data/face-min.js"></script>
+  <script src="public/build/data/eye-min.js"></script>
+  <script src="public/build/data/mouth-min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!--   <link rel="stylesheet" href="/css/styles.css" type="text/css">
  -->  <style> 
@@ -153,7 +154,7 @@
 
   <header> 
     <div class="container"> 
-      <img src="img/ReadAR_logo.png" style="width:140px;" alt="logo" class="logo"> 
+      <img src="public/img/ReadAR_logo.png" style="width:140px;" alt="logo" class="logo"> 
       <nav> 
         <ul> 
           <li><a href="#">Home</a></li>
@@ -184,8 +185,8 @@
       </div> -->
 
 <div class="panel panel-default">
-  <div class="panel-heading">Once upon a time, there was a lost puppy who just needed a friend.</div>
-  <div class="panel-body"><font color="green"> Once upon a time, there was a lost puppy who just needed a friend.</font></div>
+  <div class="panel-heading" id="target-text">Once upon a time, there was a lost puppy who just needed a friend.</div>
+  <div class="panel-body" id="user-input"><font color="green" id="tgreen"></font><font color="red" id="tred"></font></div>
 </div>
 
     </div>
@@ -211,11 +212,13 @@
 
   <script>
     var img = document.createElement("img"); 
-    img.src = 'img/dog.png'; 
+    img.src = 'public/img/dog.png'; 
 
 
 
     window.onload = function() {
+      //document.getElementById('user-input').innerHTML = "answer is:"
+      //elem.addEventListener('talk', function (e) { console.log(e.detail.results) }, false);
       var video = document.getElementById('video');
       var canvas = document.getElementById('canvas');
       var context = canvas.getContext('2d');
@@ -268,6 +271,7 @@
 
     };
   </script>
+  <script src="public/meep.js"></script>
 
 </body>
 </html>
