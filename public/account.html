@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ReadAR - Stories</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style> 
+    video, canvas {
+      margin-left: 230px;
+      margin-top: 11px;
+      position: absolute;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 400;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    header {
+      background: #f9f9f9;
+    }
+
+    header::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .logo {
+      float: left;
+      padding: 10px 0;
+    }
+
+    nav {
+      float: right;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-left: 70px;
+      padding-top: 23px;
+
+      position: relative;
+    }
+
+    nav a {
+      color: #444;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    nav a::before {
+      content: '';
+      display: block;
+      height: 5px;
+      background-color: #444;
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      width: 0%;
+      transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+      width: 100%;
+       text-decoration: none;
+    }
+
+    img  {
+      width: 100px;
+      height: auto; 
+    }
+
+    p {
+      text-align: center; 
+      font-size: 30px;
+    } 
+  }
+
+  </style>
+</head>
+
+
+<body>
+
+<header> 
+  <div class="container"> 
+    <img src="img/ReadAR_logo.png" style="width:140px;" alt="logo" class="logo"> 
+    <nav> 
+      <ul> 
+        <li><a href="#">Home</a></li>
+        <li><a href="stories.html">Stories</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+</body>
+</html>

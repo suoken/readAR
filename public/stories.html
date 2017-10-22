@@ -2,22 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>tracking.js - face alignment with camera</title>
-  <!-- <link rel="stylesheet" href="assets/demo.css"> --> 
-
-  <script src="/build/tracking-min.js"></script>
-  <script src="/build/data/face-min.js"></script>
-  <script src="/src/alignment/training/Landmarks.js"></script>
-  <script src="/src/alignment/training/Regressor.js"></script>
-
-  <!--<script src="../node_modules/dat.gui/build/dat.gui.min.js"></script> --> 
-
-  <script src="/build/data/face-min.js"></script>
-  <script src="/build/data/eye-min.js"></script>
-  <script src="/build/data/mouth-min.js"></script>
+  <title>ReadAR - Stories</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!--   <link rel="stylesheet" href="/css/styles.css" type="text/css">
- -->  <style> 
+  <style> 
     video, canvas {
       margin-left: 230px;
       margin-top: 11px;
@@ -36,7 +23,7 @@
     }
 
     header {
-      background: #55d6aa;
+      background: #f9f9f9;
     }
 
     header::after {
@@ -84,7 +71,7 @@
       display: block;
       height: 5px;
       background-color: #444;
-
+      text-decoration: none;
       position: absolute;
       top: 0;
       width: 0%;
@@ -93,6 +80,7 @@
 
     nav a:hover::before {
       width: 100%;
+       text-decoration: none;
     }
 
     img  {
@@ -105,43 +93,35 @@
       font-size: 30px;
     } 
 
-    .demo-container {
-      margin: 0 auto; 
-      width: 1150px; 
+    button { 
+      float: right;
+      transform: translate(0%, -300%);
+    }
+
+    .list-group {
+      border:0 !important;
+      padding-top: 2px !important;
+      padding-bottom: 2px !important; 
+      overflow:hidden;  
       position: relative;
-      height: 100vh;
+      display: block;
+      padding: 50px 50px;
+      margin-bottom: -1px;
+      background-color: #fff;
+      border: 0px solid #ddd;
     }
 
-/*    .demo-container video {
-      position: relative;
-      z-index: 0; 
-    } */ 
-
-    .panel-heading {
-      clear:both ;
-      text-align: center; 
-      font-size: 30px;
-      animation-duration: 0.7s; 
-      animation-name: slidein; 
+    .mb-1 {
+      position: absolute;
+      top: 5px; 
+      left:140px;
     }
 
-    .panel-body {
-      text-align: center;
-      font-size: 30px;
-    }
-
-    .book-title {
-      text-align: center; 
-    }
-
-    @keyframes slidein {
-      from {
-        margin-left: 100%; 
-        width: 300%;
-      }
-      to { 
-      margin-left: 0%; 
-      width: 100%; 
+    small {
+      position: absolute;
+      left: 140px; 
+      top: 80px;
+      font-size: 14px; 
     }
   }
 
@@ -152,10 +132,10 @@
 
   <header> 
     <div class="container"> 
-      <img src="img/book_logo.png" alt="logo" class="logo"> 
+      <img src="img/ReadAR_logo.png" style="width:140px;" alt="logo" class="logo"> 
       <nav> 
         <ul> 
-          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Home</a></li>
           <li><a href="stories.html">Stories</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
@@ -164,32 +144,83 @@
     </div>
   </header>
 
+  <div class="d-flex w-100 justify-content-between" style="padding-top: 4px;">
+    <p>Books avaliable</p>
+  </div>
+
   <div class="list-group">
   <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Books avaliable</h5>
-      <small>3 days ago</small>
-    </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small>Donec id elit non mi porta.</small>
+    <img src=img/BrittneyAndBenny.png> 
+    <p class="mb-1">Brittney and Benny</p>
+    <small>Fooled again thinking the dog likes me my slave human didn't give me any food so i pooped on the floor curl up and sleep on.</small>
+    <button type="button" class="btn btn-primary">Buy for $2.99</button>
   </a>
+
   <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
+<!--     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
-    </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small class="text-muted">Donec id elit non mi porta.</small>
+    </div> -->
+    <img src=img/ChloesQuest.png> 
+    <p class="mb-1">Chole's Quest</p>
+    <small class="text-muted">Sugar espresso filter crema mug instant viennese aroma variety acerbic fair trade redeye. Sugar organic french. </small>
+    <button type="button" class="btn btn-primary">Buy for $2.99</button>
   </a>
+
   <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
+<!--     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
-    </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small class="text-muted">Donec id elit non mi porta.</small>
+    </div> -->
+    <img src="img/ElfieAndTheApple.png"> 
+    <p class="mb-1">Elfie And The Apple</p>
+    <small class="text-muted">Sugar espresso filter crema mug instant viennese aroma variety acerbic fair trade redeye. Sugar organic french.</small>
+    <button type="button" class="btn btn-primary">Buy for $2.99</button>
   </a>
-</div>
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+<!--     <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+    </div> -->
+    <img src="img/MistyTheBigRedCat.png"> 
+    <p class="mb-1">Misty The Big Red Cat</p>
+    <small class="text-muted">Sugar espresso filter crema mug instant viennese aroma variety acerbic fair trade redeye. Sugar organic french.</small>
+    <button type="button" class="btn btn-primary">Buy for $2.99</button>
+  </a>
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+<!--     <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+    </div> -->
+    <img src="img/PetesBirthday.png"> 
+    <p class="mb-1">Pete's Birthday</p>
+    <small class="text-muted">Sugar espresso filter crema mug instant viennese aroma variety acerbic fair trade redeye. Sugar organic french.</small>
+    <button type="button" class="btn btn-primary">Buy for $2.99</button>
+  </a>
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+<!--     <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+    </div> -->
+    <img src="img/SamGoesToSpace.png"> 
+    <p class="mb-1">Sam Goes To Space</p>
+    <small class="text-muted">Sugar espresso filter crema mug instant viennese aroma variety acerbic fair trade redeye. Sugar organic french.</small>
+    <button type="button" class="btn btn-primary">Buy for $2.99</button>
+  </a>
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+<!--     <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+    </div> -->
+    <img src="img/TheEarthAndI.png"> 
+    <p class="mb-1">The Earth And I</p>
+    <small class="text-muted">Sugar espresso filter crema mug instant viennese aroma variety acerbic fair trade redeye. Sugar organic french.</small>
+    <button type="button" class="btn btn-primary">Buy for $2.99</button>
+  </a>
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+<!--     <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+    </div> -->
+    <img src="img/TheLonelyDog.png"> 
+    <p class="mb-1">The Lonely Dog</p>
+    <small class="text-muted">Sugar espresso filter crema mug instant viennese aroma variety acerbic fair trade redeye. Sugar organic french.</small>
+    <button type="button" class="btn btn-primary">Buy for $2.99</button>
+  </a>
+  </div>
 
 </body>
 
