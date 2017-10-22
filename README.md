@@ -1,4 +1,4 @@
-# readAR
+# readAR (for HackHarvard) 
 
 ## To run
 
